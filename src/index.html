@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chart</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <app-root></app-root>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../../assets/AEMET.jpeg" alt="img de inicio">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  id="welcome" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Bienvenido
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Bienvenido</a></li>
+                            <li><a class="dropdown-item" href="#">Benvinguts</a></li>
+                            <li><a class="dropdown-item" href="#">Benvidos</a></li>
+                            <li><a class="dropdown-item" href="#">Benvinguts</a></li>
+                            <li><a class="dropdown-item" href="#">Ongi etorri</a></li>
+                            <li><a class="dropdown-item" href="#">Welcome</a></li>
+                            <li><a class="dropdown-item" href="#">Bienvenue</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Introduzca texto" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--Este es el aside------------->
+    <div class="container d-flex justify-content-center">
+        <aside>
+            <div class="btn-group">
+                <button class="btn btn-info  dropdown-toggle" type="button" id="dropdownTiempo" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    EL TIEMPO
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownTiempo">
+                    <a class="dropdown-item text-warning " id="select" href="#">Observación</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Predicción</a>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-info  dropdown-toggle" type="button" id="dropdownServicios"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SERVICIOS CLIMATICOS
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownServicios">
+                    <a class="dropdown-item text-warning " id="select" href="#">Datos Climáticos</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Vigilancia del Clima</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Predicción Estatal</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Apoyo a la Gestión de Embalses</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Catálogo</a>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-info  dropdown-toggle" type="button" id="dropdownConocenos"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CONÓCENOS
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownConocenos">
+                    <a class="dropdown-item text-warning " id="select" href="#">Quiénes somos</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">A que nos dedicamos</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Nuestros Recursos</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Nuestra Historia</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Cursos</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Actividad Interncional</a>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-info  dropdown-toggle" type="button" id="dropdownConocenos"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    I+D+I
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownConocenos">
+                    <a class="dropdown-item text-warning " id="select" href="#">Transformación digital</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Predicción</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Clima</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Medio Ambiente</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Observación</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">CIAI</a>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-info  dropdown-toggle" type="button" id="dropdownConocenos"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CONOCER MÁS
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownConocenos">
+                    <a class="dropdown-item text-warning " id="select" href="#">Aeronáutica</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Marítima</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Montaña</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Biblioteca</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Cursos</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Recursos en Linea</a>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-info  dropdown-toggle" type="button" id="dropdownConocenos"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    EMPLEO PÚBLICO
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownConocenos">
+                    <a class="dropdown-item text-warning " id="select" href="#">Concursos</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Libre Designación</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Prácticas</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Becas</a>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-info  dropdown-toggle" type="button" id="dropdownConocenos"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SEDE ELECTRONICA
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownConocenos">
+                    <a class="dropdown-item text-warning " id="select" href="#">Catálogos</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">AEMET Open Data</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Estadística</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Cursos</a>
+                    <a class="dropdown-item text-warning " id="select" href="#">Actividad Interncional</a>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+    <aside>
+        <!-- Cards cuadradas pequeñas -->
+        <div class="container">
+            <div class="card-body d-flex">
+                <div class="card custom-card text-center align-items-center ">
+                    <div class="card-body">
+                        <i class="bi bi-person-circle" id="person"></i>
+                        <p class="web">Mi web</p>
+                    </div>
+                </div>
+                <div class="card custom-card text-center align-items-center ">
+                    <div class="card-body">
+                        <i class="bi bi-people-fill" id="person"></i>
+                        <p class="web">Ayuda</p>
+                    </div>
+                </div>
+                <div class="card custom-card  text-center align-items-center">
+                    <div class="card-body">
+                        <i class="bi bi-exclamation-triangle-fill" id="person"></i>
+                        <p class="web">Avisos</p>
+                    </div>
+                </div>
+                <div class="card custom-card text-center align-items-center">
+                    <div class="card-body">
+                        <i class="bi bi-thermometer-sun" id="person"></i>
+                        <p class="web">Temperatura</p>
+                    </div>
+                </div>
+                <div class="card custom-card text-center align-items-center">
+                    <div class="card-body">
+                        <i class="bi bi-phone-flip" id="person"></i>
+                        <p class="web">APP</p>
+                    </div>
+                </div>
+                <div class="card custom-card text-center align-items-center">
+                    <div class="card-body">
+                        <i class="bi bi-bar-chart-line-fill" id="person"></i>
+                        <p class="web">Datos</p>
+                    </div>
+                </div>
+                <div class="card custom-card  text-center align-items-center">
+                    <div class="card-body">
+                        <i class="bi bi-browser-safari" id="person"></i>
+                        <p class="web">Horarios</p>
+                    </div>
+                </div>
+                <div class="card custom-card  text-center align-items-center">
+                    <div class="card-body">
+                        <i class="bi bi-info-circle-fill" id="person"></i>
+                        <p class="web">Información</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <p class="header">PREDICCIÓN DE TEMPERATURA SEMANALES DE MÉRIDA</p>
+
+    <canvas id="myChart"></canvas>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdownButton = document.querySelector('.nav-link.dropdown-toggle');
+            var dropdownMenu = document.querySelector('.dropdown-menu');
+
+            dropdownButton.addEventListener('click', function () {
+                dropdownMenu.classList.toggle('show');
+            });
+
+            // Cerrar el menú desplegable al hacer clic fuera del botón y del menú
+            document.addEventListener('click', function (event) {
+                if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+
+            function mostrarOpciones(opcion) {
+                // Ocultar todas las opciones
+                document.getElementById(" dropdownTiempo").style.display = "none";
+                document.getElementById("dropdownServicios").style.display = "none";
+                document.getElementById("dropdownConocenos").style.display = "none"; // Mostrar la opción seleccionada
+                document.getElementById("opciones" + opcion.charAt(0).toUpperCase() + opcion.slice(1)).style.display = "block";
+            }
+            fetch('http://api.openweathermap.org/data/2.5/forecast?q=Mérida,ES&units=metric&appid=86dd4c3d489f3b2c00ea9fbe0735315d')
+                .then(response => response.json())
+                .then(data => {
+                    let myChart = new Chart(document.getElementById('myChart').getContext('2d'), {
+                        type: 'line',
+                        data: {
+                            labels: data.list.map(item => item.dt_txt),
+                            datasets: [{
+                                label: 'Temperatura (°C)',
+                                data: data.list.map(item => item.main.temp),
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                borderColor: 'rgba(75, 192, 205, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                });
+
+
+        });
+
+    </script>
+    <footer>
+        <p class="text-center text-success ">
+            © 2024 AEMET.Autorizado el uso de la información y su reproducción citando a AEMET.
+        </p>
+        <p class="text-center">
+            <a href="#" class="footer">Nota Legal</a>
+            <a href="#" class="footer">Privacy</a>
+            <a href="#" class="footer">Accesibilidad Web</a>
+            <a href="#" class="footer">Enlaces</a>
+            <a href="#" class="footer">Ayuda web</a>
+            <a href="#" class="footer">Contactos</a>
+        </p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
